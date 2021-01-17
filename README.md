@@ -169,7 +169,7 @@ class Client extends Resource
                     HasMany::make('Invoices'),
                 ],
                 'Actions'  => [
-                    MorphMany::make(__('Actions'), 'actions', ActionResource::class), // Acc Actions whererver you like.
+                    $this->actionfield(), // Add Actions whererver you like.
                 ],
             ]))->withToolbar(),
 
